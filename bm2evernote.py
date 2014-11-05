@@ -9,7 +9,7 @@ class Bookmark():
         self.title = title
         self.url = url
         self.tag = '<tag>' + tag + '</tag>'
-        self.date = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime(float(long(date) / 1000000)))
+        self.date = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime(float(date)))
         self.content = '''<a href="%(url)s">%(title)s</a>''' % {'title': self.title, 'url': self.url}
 
     def printAsEnex(self):
